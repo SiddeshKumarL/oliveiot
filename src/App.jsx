@@ -1,9 +1,10 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { IoTProvider } from "./context/IoTContext";
 import ProtectedRoute from "./components/ProtectedRoute";
 import Sidebar from "./components/Sidebar";
 import Topbar from "./components/Topbar";
+import Register from "./Register";
 
 // Pages
 import Login from "./pages/Login";
@@ -46,6 +47,7 @@ function App() {
       <Router>
         <Routes>
           {/* Public Login Page */}
+          <Route path="/register" element={<Register />} />
           <Route path="/login" element={<Login />} />
 
           {/* Secure Admin Console Routes */}

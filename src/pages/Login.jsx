@@ -1,5 +1,5 @@
 import { api } from '../api';
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useIoT } from '../context/IoTContext';
 import OliveLogo from '../components/OliveLogo';
@@ -175,6 +175,16 @@ const Login = () => {
               {loading ? 'Authenticating...' : 'Secure Login'}
             </button>
           </form>
+          <p className="mt-4 text-sm text-text-muted">
+            Don&apos;t have an account?{' '}
+            <button
+              type="button"
+              onClick={() => navigate('/register')}
+              className="text-primary hover:underline"
+            >
+              Create Account
+            </button>
+          </p>
         </div>
       </div>
 
